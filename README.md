@@ -19,6 +19,7 @@ A handful of years later, nearing the close of my time in University I was clean
 
 After testing every button on my device and taking note of the output on my computer, I set out to write some scripts to interpret this information and run commands
  based on the outputs of my MIDI device.
+ 
 ---
 ## Process
 The first issue I had to overcome was that the command I used to display MIDI information displayed every new state change detected. To be clear; when a note(or drumpad) 
@@ -41,6 +42,7 @@ The next issue I had to overcome was to interpret the most recent MIDI state and
 The final issue to overcome was making sure that my system of scripts would run when a MIDI input was detected. For this I used a library called 'inotifywait', this is a program
  that waits for a defined event allowing for loops that do not eat up system resources until the event is detected. Additionally I would use this loop to execute the scripts
  that I had written upon a change to the file that would recieve any new MIDI state. This culminated in the bash script "midi_log_looper.sh".
+ 
 ---
 ## Conclusion
 As I made this program originally for personal use, after much exasperation of searching on the internet for help and guidance I decided that I would make this program available
